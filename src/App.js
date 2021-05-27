@@ -1,23 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Park from "./services/Park.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => Park.index()}>Park Index</button>
+      <button
+        onClick={() => Park.single("77E0D7F0-1942-494A-ACE2-9004D2BDC59E")}
+      >
+        Park Single
+      </button>
+      <button onClick={() => Park.singleByParkCode("abli")}>
+        Park Single By parkCode
+      </button>
     </div>
   );
 }
